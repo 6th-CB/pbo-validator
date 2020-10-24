@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "start": "node src/index",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "arma-class-parser": "^1.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.11.0",
+        "eslint-plugin-import": "^2.22.1"
+    }
+}
