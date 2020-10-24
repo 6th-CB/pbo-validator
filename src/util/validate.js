@@ -460,7 +460,7 @@ module.exports = function validate(data) {
                     return obj;
                 })();
                 if (!requirements) {
-                    validationErrors.push(`Skipping equipment validation: Unknown player role (${playerType}) in "${squad.name || squad.callsign}"`);
+                    validationErrors.push(`Skipping equipment validation: Unknown player role (${playerType || player.callsign}) in "${squad.name || squad.callsign}"`);
                     return;
                 }
 
