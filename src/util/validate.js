@@ -486,7 +486,8 @@ module.exports = function validate(data) {
                 const validateRequirement = (name, key, validator) => {
                     if (requirements[key]) {
                         if (validator(requirements[key])) {
-                            validationErrors.push(`Missing equipment: ${name} of ${playerType || player.callsign || player.variableName} in ${squad.callsign || squad.name}`);
+                            const elementName = playerType || player.callsign || player.variableName;
+                            validationErrors.push(`Missing equipment: ${name} of ${elementName || 'someone'} in ${squad.callsign || squad.name}`);
                         }
                     }
                 };
