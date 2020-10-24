@@ -450,7 +450,7 @@ module.exports = function validate(data) {
             squad.elements.forEach(player => {
                 const playerType = getPlayerRole(player.callsign);
                 const requirements = (()=>{
-                    if (equipmentRequirements[playerType]) {
+                    if (!equipmentRequirements[playerType]) {
                         return null;
                     }
                     const obj = {...equipmentRequirements[playerType]};
