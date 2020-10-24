@@ -8,8 +8,7 @@ class BinarizedPboError extends Error {
     }
 }
 
-async function parsePbo(path) {
-    const pbo = await util.promisify(fs.readFile)(path, 'utf8');
+function parsePboString(pbo) {
     if (pbo.indexOf('class EditorData') === -1) {
         throw new BinarizedPboError();
     }
@@ -18,7 +17,13 @@ async function parsePbo(path) {
     return parsed;
 }
 
+async function parsePbo(path) {
+    const pbo = await util.promisify(fs.readFile)(path, 'utf8');
+    return parsePboString(pbo);
+}
+
 module.exports = {
     BinarizedPboError,
+    parsePboString,
     parsePbo,
 };
