@@ -198,7 +198,7 @@ module.exports = function (pbo) {
         const properties = getProperties(attributes);
         return {
             channelName: properties.tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name && properties.tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name.Value.data.value,
-            channelPassword: properties.tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name && properties.tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name.Value.data.value,
+            channelPassword: properties.tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password && properties.tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password.Value.data.value,
             giveRiflemanRadio: properties.tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio && properties.tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio.Value.data.value,
             giveLeadersLongRangeRadio: properties.tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio && properties.tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio.Value.data.value,
             sameSwFrequenciesForSide: properties.tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side && properties.tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side.Value.data.value,
