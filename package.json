@@ -1,6 +1,8 @@
 {
     "scripts": {
         "start": "node src/index",
+        "start-docker": "docker run --env-file=./src/.env -p 3000:3000 -p 3306:3306 pboeng",
+        "dockerize": "docker build -t pboeng . & docker save -o build/image.tar pboeng",
         "lint": "eslint ."
     },
     "dependencies": {
