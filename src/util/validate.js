@@ -402,6 +402,7 @@ module.exports = function validate(data) {
                 },
             },
             sl: {
+                lrRadio: 1,
                 ctabTablet: 1,
                 smokeWhite: 4,
                 smokeRed: 4,
@@ -412,6 +413,7 @@ module.exports = function validate(data) {
                 smokeYellow: 1,
             },
             tl: {
+                lrRadio: 1,
                 ctabTablet: 1,
                 smokeWhite: 4,
                 smokeRed: 4,
@@ -538,6 +540,38 @@ module.exports = function validate(data) {
                     'tf_pnr1000a',
                     'tf_fadak',
                 ].includes(player.inventory.radio));
+                validateRequirement('Long-range radio', 'lrRadio', () => [
+                    'tf_rt1523g',
+                    'tf_rt1523g_bwmod',
+                    'tf_rt1523g_rhs',
+                    'tf_rt1523g_big',
+                    'tf_rt1523g_big_bwmod',
+                    'tf_rt1523g_big_bwmod_tropen',
+                    'tf_rt1523g_big_rhs',
+                    'tf_rt1523g_sage',
+                    'tf_rt1523g_green',
+                    'tf_rt1523g_fabric',
+                    'tf_rt1523g_black',
+                    'tf_anprc155',
+                    'tf_anprc155_coyote',
+                    'tf_mr3000',
+                    'tf_mr3000_multicam',
+                    'tf_mr3000_bwmod',
+                    'tf_mr3000_bwmod_tropen',
+                    'tf_mr3000_rhs',
+                    'tf_anarc210',
+                    'tf_anarc164',
+                    'tf_mr6000l',
+                    'B_RadioBag_01_wdl_F',
+                    'B_RadioBag_01_mtp_F',
+                    'B_RadioBag_01_tropic_F',
+                    'B_RadioBag_01_black_F',
+                    'B_RadioBag_01_hex_F',
+                    'B_RadioBag_01_oucamo_F',
+                    'B_RadioBag_01_ghex_F',
+                    'B_RadioBag_01_digi_F',
+                    'B_RadioBag_01_eaf_F',
+                ].includes(player.inventory.backpack && player.inventory.backpack.name));
                 validateRequirement('Spare barrel', 'spareBarrel', count => countInInventory(['ACE_SpareBarrel']) >= count);
                 validateRequirement('CTAB Android', 'ctabAndroid', () => player.inventory.gps === 'ItemAndroid');
                 validateRequirement('CTAB Tablet', 'ctabTablet', () => player.inventory.gps === 'ItemcTab');
