@@ -335,7 +335,12 @@ module.exports = function validate(data) {
                 sprayGreen: 1,
                 sprayRed: 1,
             },
-            commander: {},
+            commander: {
+                lrRadio: 1,
+            },
+            officer: {
+                lrRadio: 1,
+            },
             uav: {},
             loader: {},
             gunner: {},
