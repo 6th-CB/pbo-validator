@@ -151,6 +151,8 @@ function getProperties(attributes) {
 
 module.exports = function (pbo) {
     const relevantData = {
+        briefingName: pbo.Mission.Intel.briefingName,
+        overviewText: pbo.Mission.Intel.overviewText,
         aiIsDisabled: pbo.ScenarioData.disabledAI === 1,
         respawnOnCustomPosition: pbo.ScenarioData.respawn === 3,
         respawnDelay: pbo.ScenarioData.respawnDelay,
