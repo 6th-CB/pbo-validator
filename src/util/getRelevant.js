@@ -286,7 +286,7 @@ module.exports = function (pbo) {
                         callsign: entity.Attributes.description,
                         isPlayer: entity.Attributes.isPlayer,
                         isPlayable: entity.Attributes.isPlayable,
-                        inventory: inventory && {
+                        inventory: inventory ? {
                             binocular: inventory.binocular,
                             map: inventory.map,
                             compass: inventory.compass,
@@ -343,7 +343,7 @@ module.exports = function (pbo) {
                                     count: item.count,
                                 })),
                             },
-                        },
+                        } : {},
                     };
                 }),
             };
