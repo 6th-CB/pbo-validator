@@ -530,7 +530,14 @@ module.exports = function validate(data) {
                 validateRequirement('Smoke', 'smokeWhite', count => countInInventory(['SmokeShell']) >= count);
                 validateRequirement('Grenade', 'grenade', count => countInInventory(['HandGrenade', 'MiniGrenade']) >= count);
                 validateRequirement('Rangefinder', 'rangefinder', () => player.inventory.binocular.name === 'Rangefinder');
-                validateRequirement('Radio', 'radio', () => player.inventory.radio === 'tf_anprc152');
+                validateRequirement('Radio', 'radio', () => [
+                    'tf_anprc152',
+                    'tf_anprc148jem',
+                    'tf_anprc154',
+                    'tf_rf7800str',
+                    'tf_pnr1000a',
+                    'tf_fadak',
+                ].includes(player.inventory.radio));
                 validateRequirement('Spare barrel', 'spareBarrel', count => countInInventory(['ACE_SpareBarrel']) >= count);
                 validateRequirement('CTAB Android', 'ctabAndroid', () => player.inventory.gps === 'ItemAndroid');
                 validateRequirement('CTAB Tablet', 'ctabTablet', () => player.inventory.gps === 'ItemcTab');
