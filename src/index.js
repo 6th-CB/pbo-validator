@@ -87,7 +87,6 @@ discordUtil.getClient()
                                     errorStrings.push(err);
                                 }
                             });
-                            await channel.send(`Validation of "${pbo.name}" found the following errors:`);
                             errorStrings.forEach(async errStr => {
                                 await channel.send(errStr);
                             });
