@@ -130,7 +130,7 @@ module.exports = function validate(data) {
         const validationErrors = [];
         let adminLoggedExists = false;
         data.zeuses.forEach(zeus => {
-            if (zeus.owner === '#adminLogged') {
+            if (zeus.owner && zeus.owner.toLowerCase() === '#adminlogged') {
                 adminLoggedExists = true;
             } else {
                 const owner = data.players.find(player => player.variableName === zeus.owner);
