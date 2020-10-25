@@ -212,12 +212,7 @@ module.exports = function validate(data) {
                     autorifleman: elementRoles.filter(role => role === 'autorifleman').length,
                     marksman: elementRoles.filter(role => role === 'marksman').length,
                     medic: elementRoles.filter(role => role === 'medic').length,
-                    rifleman: elementRoles.filter(role => role === 'rifleman').length,
                     lat: elementRoles.filter(role => role === 'lat').length,
-                    at: elementRoles.filter(role => role === 'at').length,
-                    aa: elementRoles.filter(role => role === 'aa').length,
-                    engineer: elementRoles.filter(role => role === 'engineer').length,
-                    ammobearer: elementRoles.filter(role => role === 'ammobearer').length,
                 };
 
                 const validateRoleCount = (roleKey, roleName, count) => {
