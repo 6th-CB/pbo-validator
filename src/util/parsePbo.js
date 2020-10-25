@@ -12,6 +12,7 @@ function parsePboString(pbo) {
     if (pbo.indexOf('class EditorData') === -1) {
         throw new BinarizedPboError();
     }
+    pbo = pbo.split(/\0{16}/u)[2]; // Missionfile .pbo appears to have regions split by 32 bytes of 0
     const content = pbo.slice(pbo.indexOf('class EditorData'), pbo.lastIndexOf('};') + '};'.length);
     const parsed = armaClassParser.parse(content);
     return parsed;
